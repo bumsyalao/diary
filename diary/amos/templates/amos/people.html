@@ -1,0 +1,28 @@
+{% load static %}  
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title> my html </title>
+      <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+      <script src="{% static 'script/app.js' %}"> </script>
+    </head>
+    <body>
+        <div class="heading">My people</div>
+
+        <form class="form" action="{% url 'addperson' %}" method="POST">
+          {% csrf_token %}
+          {{form}}
+          <button type='submit'>Save</button>        
+        </form>
+
+        {% for person in people %}
+          <ul>
+            <li class="person">
+              <p>Name: {{person.name}}</p>
+              <p>Gender: {{person.gender}}</p>
+              <p>Shirt size: {{person.shirt_size}}</p>
+            </li>
+          </ul>
+        {% endfor %} 
+    </body>
+  </html>

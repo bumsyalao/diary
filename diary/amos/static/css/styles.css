@@ -1,0 +1,27 @@
+body {
+  /* background-color: #465772; */
+}
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding: 0rem;
+  margin: 3rem;
+  margin-left: 19rem;
+  line-height: 30px;
+}
+
+.person {
+  width: 50%; 
+  line-height: 30px;
+  padding: 10px;
+  position: relative;
+  background-color: #f5f5f5;
+}
